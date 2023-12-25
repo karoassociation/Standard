@@ -3,7 +3,9 @@ on:
   push:
     branches: ["master"]
   workflow_dispatch:
-
+permissions:
+    id-token: write
+    pages: write
 env:
     INSTANCE: Writerside/karo
     ARTIFACT: webHelpKARO2-all.zip
