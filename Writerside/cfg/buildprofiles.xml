@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildprofiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd">
+
+    <variables>
+        <auto-convert-headings-to-chapters>true</auto-convert-headings-to-chapters>
+        <enable-browser-edits>true</enable-browser-edits>
+        <browser-edits-url>https://github.com/aaron-junker/karodocs/</browser-edits-url>
+        <versions-switcher>
+            https://gist.githubusercontent.com/Aaron-Junker/b31a4f22ab8936fd4ed80bf0010e58b5/raw/help-versions.json
+        </versions-switcher>
+    </variables>
+    <build-profile instance="karo">
+        <variables>
+            <noindex-content>false</noindex-content>
+        </variables>
+    </build-profile>
+    <footer>
+        <copyright>Aaron Junker Technologies 2023</copyright>
+        <social type="twitter" href="https://twitter.com/theredcuber"/>
+    </footer>
+</buildprofiles>

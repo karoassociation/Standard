@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="karo"
+                  name="Karo Standard"
+                  status="eap"
+                  start-page="Start.md">
+
+    <toc-element topic="Start.md"/>
+    <toc-element topic="Syntax-Elements.md">
+        <toc-element topic="Classes.md"/>
+        <toc-element topic="Functions.md"/>
+        <toc-element topic="1-3-Enumerations.md"/>
+        <toc-element topic="1-4-Parser-Instructions.md">
+        </toc-element>
+    </toc-element>
+    <toc-element topic="2-Objects.md"/>
+</instance-profile>

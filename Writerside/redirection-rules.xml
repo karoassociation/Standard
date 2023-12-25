@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="11e50dd4">
+        <description>Created after removal of "This is the first topic" from Help Instance</description>
+        <accepts>Default-topic.html</accepts>
+    </rule>
+    <rule id="34650704">
+        <description>Created after removal of "Empty XML Topic" from Help Instance</description>
+        <accepts>Empty-XML-Topic.html</accepts>
+    </rule>
+    <rule id="3ca79d34">
+        <description>Created after removal of "Empty XML Topic" from Karo Help</description>
+        <accepts>Empty-XML-Topic.html</accepts>
+    </rule>
+    <rule id="4bc14dcc">
+        <description>Created after removal of "Syntax elemnts" from Karo Help</description>
+        <accepts>Syntax-elements.html</accepts>
+    </rule>
+    <rule id="4e2e529">
+        <description>Created after removal of "1 Syntax Elements" from Karo Help</description>
+        <accepts>Syntax-Elements.html</accepts>
+    </rule>
+    <rule id="31901f4b">
+        <description><![CDATA[Created after removal of "<1-4-1.md>" from Karo Standard]]></description>
+        <accepts>1-4-1.html</accepts>
+    </rule>
+    <rule id="1c26c88a">
+        <description>Created after removal of "1.4.2 Import instruction" from Karo Standard</description>
+        <accepts>1-4-2-Import-instruction.html</accepts>
+    </rule>
+    <rule id="59e449ee">
+        <description>Created after removal of "1.4.3 Make static function/property accessible everywhere" from Karo
+            Standard
+        </description>
+        <accepts>1-4-3-Make-static-function-property-accessible-everywhere.html</accepts>
+    </rule>
+</rules>
