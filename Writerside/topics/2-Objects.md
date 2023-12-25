@@ -1,3 +1,3 @@
 # 2 Objects
 
-Start typing here...
+In Karo everything is an object.

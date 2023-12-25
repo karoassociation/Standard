@@ -1,3 +1,0 @@
-# 1.1 Classes and Namespaces
-
-Start typing here...

@@ -8,9 +8,9 @@
                   start-page="Start.md">
 
     <toc-element topic="Start.md"/>
-    <toc-element topic="Syntax-Elements.md">
-        <toc-element topic="Classes.md"/>
-        <toc-element topic="Functions.md"/>
+    <toc-element topic="1-Syntax-Elements.md">
+        <toc-element topic="1-1-Classes-and-Namespaces.md"/>
+        <toc-element topic="1-2-Functions.md"/>
         <toc-element topic="1-3-Enumerations.md"/>
         <toc-element topic="1-4-Parser-Instructions.md">
         </toc-element>

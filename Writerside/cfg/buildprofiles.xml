@@ -5,7 +5,7 @@
     <variables>
         <auto-convert-headings-to-chapters>true</auto-convert-headings-to-chapters>
         <enable-browser-edits>true</enable-browser-edits>
-        <browser-edits-url>https://github.com/aaron-junker/karodocs/</browser-edits-url>
+        <browser-edits-url>https://github.com/aaron-junker/karodocs/blob/master/Writerside/</browser-edits-url>
         <versions-switcher>
             https://gist.githubusercontent.com/Aaron-Junker/b31a4f22ab8936fd4ed80bf0010e58b5/raw/help-versions.json
         </versions-switcher>
