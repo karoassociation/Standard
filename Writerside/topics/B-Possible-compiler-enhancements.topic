@@ -1,0 +1,40 @@
+# B Possible compiler enhancements
+
+Following a list of compiler enhancements that are not required for the language to work, but would be nice to have.
+
+The following examples also apply if a variable certainly always has the provided value. This can be determined by the compiler.
+
+* `x*2` should be converted to `x<<1`
+* `x/2` should be converted to `x>>1`
+* `x*4` should be converted to `x<<2`
+* `x/4` should be converted to `x>>2`
+* `x*8` should be converted to `x<<3`
+* `x/8` should be converted to `x>>3`
+* and so on...
+
+* `1 && x` should be converted to `x`
+* `0 && x` should be converted to `false`
+* `1 || x` should be converted to `true`
+* `0 || x` should be converted to `x`
+* And the other way around
+
+* `x && x` should be converted to `x`
+* `x || x` should be converted to `x`
+* `x && !x` should be converted to `0`
+* `x || !x` should be converted to `1`
+* `(x > y) || (x < y)` should be converted to `1`
+* And the other way around
+
+* `x == 1` should be converted to `x`
+* `x == 0` should be converted to `!x`
+* `x != 1` should be converted to `!x`
+* `x != 0` should be converted to `x`
+
+* `T |> T` should be converted to `1`
+
+* `x == x` should be converted to `1`
+* `x != x` should be converted to `0`
+
+* Enumeration values should be converted to their integer value directly
+* Constant statements should be converted to their value directly
+* Constants should be converted to their value directly

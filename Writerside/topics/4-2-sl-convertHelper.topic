@@ -1,0 +1,36 @@
+# 4.2 sl::convertHelper&lt;TargetType&gt;
+
+## 4.2.1 convert
+
+```
+[sl.attributes::public]
+[sl.attributes::static]
+[sl.attributes::implementation(sl.attributes::implementationType.native)]
+sl::convertHelper<TargetType>.convert|value: <-sl.types::class|: sl.types::Result<TargetType> { }
+```
+
+<tldr>
+    <p><b>Converts the provided value to `TargetType`.</b></p>
+    <p>Definition code: <code>sl.types::function&lt;sl.types::result&lt;TargetType&gt;, sl.types::class&gt;</code></p>
+    <p>Return type: <code>sl.types::Result&lt;TargetType&gt;</code></p>
+</tldr>
+
+This function converts the provided value to the target type. If the conversion is not possible, the function returns an unsuccessful result.
+
+Following effortless conversions are supported:
+
+* A lesser constrained type to a more constrained type
+* A type to a type with the same constraints
+* A type to the same type
+* A value that fits the constraints of the target type
+* An enumeration value to an integer
+
+Following conversions are also supported:
+
+* An integer to a floating point number
+* A floating point number to an integer (The floating part is omitted)
+* A string to an integer (The string must be a valid number)
+* A string to a floating point number (The string must be a valid number separated by either a dot or a comma)
+* An integer to a string
+* A floating point number to a string (The decimal separator is a dot)
+* 

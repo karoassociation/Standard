@@ -1,0 +1,3 @@
+# 1.6 Type restrictions
+
+Start typing here...
