@@ -1,3 +1,6 @@
 # 4.1 sl.types
 
-Start typing here...
+This namespace contains different types that are used in the Karo Standard Library.
+
+## sl.types::int
+

@@ -1,3 +1,7 @@
-# 4 Standard Libary
+# 4 Standard Library (sl)
 
-Start typing here...
+The standard library located in the `sl` namespace contains all the standard functions, variables, classes, etc. of
+Karo.
+
+Some of these elements don't have a provided implementation and rely on implementation from the parser. These are marked
+with the `[TBD]` attribute.

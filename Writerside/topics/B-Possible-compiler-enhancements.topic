@@ -1,40 +1,108 @@
-# B Possible compiler enhancements
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="B-Possible-compiler-enhancements"
+       title="B Possible compiler enhancements"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
 
-Following a list of compiler enhancements that are not required for the language to work, but would be nice to have.
+    <title>
+        B Possible compiler enhancements
+    </title>
+    <p>Following a list of compiler enhancements that are not required for the language to work, but would be nice to
+        have.</p>
+    <procedure title="The following examples also apply if a variable certainly always has the provided value. This can be determined
+        by the compiler." type="choices">
+        <step>
+            <p><code>x*2</code> should be converted to <code>x&lt;&lt;1</code></p>
+        </step>
+        <step>
+            <p><code>x/2</code> should be converted to <code>x&gt;&gt;1</code></p>
+        </step>
+        <step>
+            <p><code>x*4</code> should be converted to <code>x&lt;&lt;2</code></p>
+        </step>
+        <step>
+            <p><code>x/4</code> should be converted to <code>x&gt;&gt;2</code></p>
+        </step>
+        <step>
+            <p><code>x*8</code> should be converted to <code>x&lt;&lt;3</code></p>
+        </step>
+        <step>
+            <p><code>x/8</code> should be converted to <code>x&gt;&gt;3</code></p>
+        </step>
+        <step>
+            <p>and so on...</p>
+        </step>
+    </procedure>
+    <procedure type="choices">
+        <step>
+            <p><code>1 &amp;&amp; x</code> should be converted to <code>x</code></p>
+        </step>
+        <step>
+            <p><code>0 &amp;&amp; x</code> should be converted to <code>false</code></p>
+        </step>
+        <step>
+            <p><code>1 || x</code> should be converted to <code>true</code></p>
+        </step>
+        <step>
+            <p><code>0 || x</code> should be converted to <code>x</code></p>
+        </step>
+        <step>
+            <p>And the other way around</p>
+        </step>
+    </procedure>
+    <procedure type="choices">
+        <step>
+            <p><code>x &amp;&amp; x</code> should be converted to <code>x</code></p>
+        </step>
+        <step>
+            <p><code>x || x</code> should be converted to <code>x</code></p>
+        </step>
+        <step>
+            <p><code>x &amp;&amp; !x</code> should be converted to <code>0</code></p>
+        </step>
+        <step>
+            <p><code>x || !x</code> should be converted to <code>1</code></p>
+        </step>
+        <step>
+            <p><code>(x &gt; y) || (x &lt; y)</code> should be converted to <code>1</code></p>
+        </step>
+        <step>
+            <p>And the other way around</p>
+        </step>
+    </procedure>
+    <procedure type="choices">
+        <step>
+            <p><code>x == 1</code> should be converted to <code>x</code></p>
+        </step>
+        <step>
+            <p><code>x == 0</code> should be converted to <code>!x</code></p>
+        </step>
+        <step>
+            <p><code>x != 1</code> should be converted to <code>!x</code></p>
+        </step>
+        <step>
+            <p><code>x != 0</code> should be converted to <code>x</code></p>
+        </step>
+        <step>
+            <p><code>T |&gt; T</code> should be converted to <code>1</code></p>
+        </step>
+        <step>
+            <p><code>x == x</code> should be converted to <code>1</code></p>
+        </step>
+        <step>
+            <p><code>x != x</code> should be converted to <code>0</code></p>
+        </step>
+    </procedure>
+    <procedure type="choices">
+        <step>
+            <p>Enumeration values should be converted to their integer value directly</p>
+        </step>
+        <step>
+            <p>Constant statements should be converted to their value directly</p>
+        </step>
+        <step>
+            <p>Constants should be converted to their value directly</p>
+        </step>
+    </procedure>
 
-The following examples also apply if a variable certainly always has the provided value. This can be determined by the compiler.
-
-* `x*2` should be converted to `x<<1`
-* `x/2` should be converted to `x>>1`
-* `x*4` should be converted to `x<<2`
-* `x/4` should be converted to `x>>2`
-* `x*8` should be converted to `x<<3`
-* `x/8` should be converted to `x>>3`
-* and so on...
-
-* `1 && x` should be converted to `x`
-* `0 && x` should be converted to `false`
-* `1 || x` should be converted to `true`
-* `0 || x` should be converted to `x`
-* And the other way around
-
-* `x && x` should be converted to `x`
-* `x || x` should be converted to `x`
-* `x && !x` should be converted to `0`
-* `x || !x` should be converted to `1`
-* `(x > y) || (x < y)` should be converted to `1`
-* And the other way around
-
-* `x == 1` should be converted to `x`
-* `x == 0` should be converted to `!x`
-* `x != 1` should be converted to `!x`
-* `x != 0` should be converted to `x`
-
-* `T |> T` should be converted to `1`
-
-* `x == x` should be converted to `1`
-* `x != x` should be converted to `0`
-
-* Enumeration values should be converted to their integer value directly
-* Constant statements should be converted to their value directly
-* Constants should be converted to their value directly
+</topic>

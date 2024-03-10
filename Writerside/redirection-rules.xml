@@ -40,4 +40,12 @@
         </description>
         <accepts>1-4-3-Make-static-function-property-accessible-everywhere.html</accepts>
     </rule>
+    <rule id="651ea88f">
+        <description>Created after removal of "Empty MD Topic" from Karo Standard</description>
+        <accepts>Empty-MD-Topic.html</accepts>
+    </rule>
+    <rule id="421a19fb">
+        <description>Created after removal of "3" from Karo Standard</description>
+        <accepts>3.html</accepts>
+    </rule>
 </rules>
