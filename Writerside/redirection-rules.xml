@@ -48,4 +48,13 @@
         <description>Created after removal of "3" from Karo Standard</description>
         <accepts>3.html</accepts>
     </rule>
+    <rule id="714d201c">
+        <description>
+            <![CDATA[Created after removal of "4.2 sl::convertHelper<TargetType>" from Karo Standard]]></description>
+        <accepts>4-2-sl-convertHelper.html</accepts>
+    </rule>
+    <rule id="372aaa6e">
+        <description>Created after removal of "4.1 sl.types" from Karo Standard</description>
+        <accepts>4-1-sl-types.html</accepts>
+    </rule>
 </rules>

@@ -17,9 +17,13 @@
         </toc-element>
         <toc-element topic="1-5-Comments.md"/>
         <toc-element topic="1-6-Type-restrictions.md"/>
+        <toc-element topic="1-7-Arrays.md">
+        </toc-element>
+        <toc-element topic="1-8-Accessing-static-members.md"/>
     </toc-element>
     <toc-element topic="2-Objects.md">
         <toc-element topic="2-1-Inheritance.md"/>
+        <toc-element topic="2-2-Static-members.md"/>
     </toc-element>
     <toc-element topic="3-Statements.md">
         <toc-element topic="3-1-Operators.md"/>
@@ -27,8 +31,6 @@
         <toc-element topic="3-3-Array-access.md"/>
     </toc-element>
     <toc-element topic="4-Standard-Library.md">
-        <toc-element topic="4-2-sl-convertHelper.topic"/>
-        <toc-element topic="4-1-sl-types.md"/>
     </toc-element>
     <toc-element topic="A-Attachments.md">
         <toc-element topic="A-1-Definitions-txt.md"/>

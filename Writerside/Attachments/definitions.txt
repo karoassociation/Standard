@@ -14,8 +14,8 @@ function_definition :== ('|' function_definition_parameter_list '|')? ':' identi
 function_definition_parameter_list :== ((name ':' ('<-')+ (identifier | '!')) (',' name ':' ('<-')+ identifier)*)?
 function_definition_content :== instruction*
 instruction :== (statement ';' | parser_instruction)
-identifier :== namespace? name
-value_identifier :== identifier ('.' name)?
+identifier :== namespace? name (array_type_appendix)
+value_identifier :== identifier (('.' name)? | (':' name)?)?
 statement :== ('!!' number? | '!' statement_content | statement_content)
 statement_content :== (value_identifier | function_definition | calling_parameter_list | operator_symbol | string | array_access | number)*
 array_access :== '[' statement_content ']'
@@ -29,3 +29,4 @@ comment :== line_comment | block_comment
 line_comment :== '//' (allowed_comment_chars - [^#0d#0a])* (#0d | #0a)
 block_comment :== '/*' (allowed_comment_chars - '*/')* '*/'
 allowed_comment_chars :== [^#00]
+array_type_appendix :== '[]'
