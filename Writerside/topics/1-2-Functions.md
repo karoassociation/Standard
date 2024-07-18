@@ -52,6 +52,7 @@ If a function is defined in a class, the first argument can be a reference to th
 
 **Example:**
 
+
 The following example defines a function with two arguments, where the first one is a reference to the class itself (as the previous examples, this is incomplete).
 
 ```

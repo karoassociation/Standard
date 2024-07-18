@@ -2,7 +2,7 @@
 
 <code-block src="definitions.txt" include-lines="32" />
 
-Arrays are continious collections of 
+Arrays are continuous collections of 
 
 ## 1.7.1 Array type
 
