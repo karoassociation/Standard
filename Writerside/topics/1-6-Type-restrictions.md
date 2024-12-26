@@ -2,7 +2,7 @@
 
 A special property of Karo is to restrict certain types to a certain values. This id done by putting the restrictions in single quotes after the type.
 
-You compare a value to a property of a type. You cannot use non-static variables in the comparison.
+You compare a value to a property of a type.
 
 **Example:**
 

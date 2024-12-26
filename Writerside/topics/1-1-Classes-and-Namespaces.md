@@ -11,8 +11,7 @@ In Karo the directory structure defines the namespaces and one file contains one
 
 ## 1.1.1 Files
 
-Karo source code files have a filename ending with the extension `.karo`. The files contain the source code in
-uncompiled text form. A file contains optional parser instructions and one optional class definition.
+Karo source code files have a filename ending with the extension `.karo`. The files contain the source code in uncompiled text form. A file contains optional parser instructions and one optional class definition.
 
 > Empty files or files with just parser instructions are allowed, but it is discouraged from using them.
 >
@@ -23,8 +22,7 @@ throw an error.
 
 ## 1.1.2 Namespaces
 
-A namespace is the directory structure from the path where the file is located (from the project root as starting
-point). The path elements are separated by a dot (with no trailing dot at the end).
+A namespace is the directory structure from the path where the file is located (from the project root as starting point). The path elements are separated by a dot (with no trailing dot at the end).
 
 > How a project root is defined can be determined by the compiler or the parser.
 >
@@ -36,4 +34,4 @@ A file located under `exampleProject/example/tests/` has the namespace `exampleP
 
 ## 1.1.3 Classes
 
-A class 
+A class is a container of properties. 

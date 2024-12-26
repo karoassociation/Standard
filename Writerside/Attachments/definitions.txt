@@ -1,6 +1,6 @@
 karo_document :== (class_definition | enum_definition)? | parser_instruction*
 class_definition :== attribute* namespace name '{' class_definition_content '}'
-enum_definition :== attribute* '!' namespace name '{' enum_definition_content '}'
+enum_definition :== attribute* '<-' namespace name '{' enum_definition_content '}'
 namespace :== name ('.' name)* '::'
 enum_definition_content :== name (',' name)*
 parser_instruction :== '#' parser_instruction_name (' ' parser_instruction_content)? ';'

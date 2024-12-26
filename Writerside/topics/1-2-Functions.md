@@ -1,6 +1,6 @@
 # 1.2 Functions
 
-<show-structure for="chapter" depth="5"/>
+<show-structure for="chapter" depth="5"></show-structure>
 
 <code-block src="definitions.txt" include-lines="13-16" />
 
@@ -25,7 +25,7 @@ The following example defines a function with two arguments: a boolean and a num
 
 #### 1.2.1.1.1 Optional arguments
 
-[TBD]
+[TBD](TBD.md)
 
 #### 1.2.1.1.2 Piped arguments
 
@@ -96,23 +96,22 @@ Behind the scenes of the compiler/interpreter the function names are generated t
 They are structured as following:
 
 * Function name:
-  * For named function: The name of the function
-  * Function that has the `sl.attributes::constructor` attribute. `<c>`
-  * For other functions with no name: `<>` and then the number of the anonymous function in the current type
+    * For named function: The name of the function
+    * Function that has the `sl.attributes::constructor` attribute. `<constructor>`
+    * For other functions with no name: `<>` and then the number of the anonymous function in the current type
 * For generic functions: `:`, then the number of generic functions, `:`
-  * For variadic type arguments the variadic is not counted and `...` is added after the number
-* Argument list: `(`The arguments with full qualifier seperated by a comma (`)`)
-  * For varidic arguments use `...` followed by the type
-* Then `*` and the fully qualified return type
+    * For variadic type arguments the variadic is not counted and `...` is added after the number
+* Argument list: `(`The arguments with full qualifier separated by a comma (`)`)
+    * For variadic arguments use `...` followed by the type
 
 **Examples:**
 
 Following some function definitions. First the full name and then the corresponding function definition.
 
 ```
-//example(sl.types::int,sl.types::string,...sl.types::array<sl.types::string>)*sl.types::void
+//example(sl.types::int,sl.types::string,...sl.types::array<sl.types::string>)
 example |a:int, b: string, c: ...string[]|: void { }
 
-//<>1:2...:()*sl.types::string
+//<>1:2...:()
 <T1, T2, ...T>||: string { }
 ```
