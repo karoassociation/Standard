@@ -245,43 +245,21 @@ This operator only takes one operand on the right side.
 The not operator consists of an exclamation mark (`!`) and compares the operand. It returns `1` if the operand is
 `0` and `0` if the operand is `1`.
 
-## 3.1.4 Assignment operators
+<note>
+As an exclamation mark at the beginning of a statement will be evaluated as a return statement, beginning with an exclamation mark must be put in parentheses.
 
-Assignment operators assign a value to a variable. They all return the assigned value.
+<code-block>
+// This returns the test variable
+!test;
+// This negates the test variable
+(!test);
+</code-block>
+<warning>
+The second example has no effect though.
+</warning>
+</note>
 
-### 3.1.4.1 The equals operator
-
-| Operand 1 type | Operand 2 type | Result type |
-|----------------|----------------|-------------|
-| `T`            | `T`            | `T`         |
-
-The equals operator consists of an equal sign (`=`) and assigns the value of the second operand to the first operand.
-
-### 3.1.4.2 The plus equals operator
-
-| Operand 1 type     | Operand 2 type     | Result type        |
-|--------------------|--------------------|--------------------|
-| `sl.types::number` | `sl.types::number` | `sl.types::number` |
-| `sl.types::number` | `sl.types::int`    | `sl.types::number` |
-| `sl.types::int`    | `sl.types::int`    | `sl.types::int`    |
-| `sl.types::int`    | `sl.types::number` | `sl.types::number` |
-| `sl.types::string` | `sl.types::string` | `sl.types::string` |
-
-The plus equals operator consists of a plus sign and an equal sign (`+=`) and adds the second operand to the first.
-
-If both operands are of the type [`sl.types::string`](TBD.md) it concatenates the two strings.
-
-### 3.1.4.3 The minus equals operator
-
-| Operand 1 type     | Operand 2 type     | Result type        |
-|--------------------|--------------------|--------------------|
-| `sl.types::number` | `sl.types::number` | `sl.types::number` |
-| `sl.types::number` | `sl.types::int`    | `sl.types::number` |
-| `sl.types::int`    | `sl.types::int`    | `sl.types::int`    |
-| `sl.types::int`    | `sl.types::number` | `sl.types::number` |
-
-The minus equals operator consists of a minus sign and an equal sign (`-=`) and subtracts the second operand from the
-first.
+## 3.1.4
 
 ## 3.1.5 Parentheses
 

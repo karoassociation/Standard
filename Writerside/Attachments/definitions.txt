@@ -16,18 +16,20 @@ function_definition_content :== instruction*
 instruction :== (statement ';' | parser_instruction)
 identifier :== namespace? (name | static_identifier) array_type_appendix?
 value_identifier :== identifier (('.' name)? | (':' name)?)?
-statement :== ('!!' number? | '!' statement_content | statement_content)
+statement :== ('!!' number? | '!' statement_content | statement_content | new_variable_assignment_statement | pipe_statement)
 statement_content :== (value_identifier | function_definition | calling_parameter_list | operator_symbol | string | array_access | number)*
 array_access :== '[' statement_content ']'
 string :== ('"' [^"]* '"')
-operator_symbol :== [!^+-/*=><()%]
+operator_symbol :== [!^+-/*><()%&|%]
 number :== [0-9]+
 name :== (name_beginning - number) ([^:;,.?\/`~^'"<>{}[]()+*])*
 name_beginning :== [^:;,.?\/`~^'"<>{}[]()+*-]
-class_property_definition :== attribute* name ':' identifier '=' statement_content ';'
+class_property_definition :== attribute* name ':' identifier (':=' statement_content) ';'
 comment :== line_comment | block_comment
 line_comment :== '//' (allowed_comment_chars - [^#0d#0a])* (#0d | #0a)
 block_comment :== '/*' (allowed_comment_chars - '*/')* '*/'
 allowed_comment_chars :== [^#00]
 array_type_appendix :== '[]'
 static_identifier :== name ':' name
+new_variable_assignment_statement :== name ':' identifier ':=' statement_content
+pipe_statement :== statement_content '->' (statement_content | pipe_statement)
