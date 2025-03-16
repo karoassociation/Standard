@@ -1,6 +1,6 @@
-# 2 Objects
+# 2 Types
 
-In Karo everything is an object. Every object has a type and a value. The type defines what the object can do and the
+In Karo everything is a type. Every type has a type on its own and a value. The type defines what the object can do and the
 value is the actual data that the object holds.
 
 A type is defined by a class. A class is a collection of properties and methods (Although methods are also properties,

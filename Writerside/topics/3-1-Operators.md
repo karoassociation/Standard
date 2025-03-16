@@ -9,11 +9,13 @@ An operator consists of one or multiple of the in the definitions file defined c
 
 **Example**:
 
-Following examples are considered valid operators (although the compiler/interpreter would throw an error, as they are not defined): `+`, `++`, `+-`, `/`, `/+-!<>`
+Following examples are considered valid operators (although the compiler/interpreter would throw an error, as they are not defined):
+`+`, `++`, `+-`, `/`, `/+-!<>`
 
 ## 3.1.1 Comparing operators
 
-Comparing operators all return an object of type [`sl.types::bool`](TBD.md). It returns `1` if the condition is true and `0` if the condition is false.
+Comparing operators all return an object of type [`sl.types::bool`](TBD.md). It returns `1` if the condition is true and
+`0` if the condition is false.
 
 ### 3.1.1.1 The equals operator
 
@@ -21,7 +23,8 @@ Comparing operators all return an object of type [`sl.types::bool`](TBD.md). It 
 |----------------|----------------|------------------|
 | `T`            | `T`            | `sl.types::bool` |
 
-The equals operator consists of two equal signs (`==`) and compares the two operands. It returns `1` if the operands are equal and `0` if they are not.
+The equals operator consists of two equal signs (`==`) and compares the two operands. It returns
+`1` if the operands are equal and `0` if they are not.
 
 If the operand are equal is determined by first comparing the type of the operands and then the values of the properties of the object.
 
@@ -31,7 +34,8 @@ If the operand are equal is determined by first comparing the type of the operan
 |----------------|----------------|------------------|
 | `T`            | `T`            | `sl.types::bool` |
 
-The not equals operator consists of an exclamation mark and an equal sign (`!=`) and compares the two operands. It returns `1` if the operands are not equal and `0` if they are.
+The not equals operator consists of an exclamation mark and an equal sign (
+`!=`) and compares the two operands. It returns `1` if the operands are not equal and `0` if they are.
 
 If the operand are equal is determined by first comparing the type of the operands and then the values of the properties of the object.
 
@@ -44,7 +48,8 @@ If the operand are equal is determined by first comparing the type of the operan
 | `sl.types::int`    | `sl.types::int`    | `sl.types::bool` |
 | `sl.types::int`    | `sl.types::number` | `sl.types::bool` |
 
-The greater than operator consists of a greater than sign (`>`) and compares the two operands. It returns `1` if the first operand is greater than the second and `0` if it is not.
+The greater than operator consists of a greater than sign (`>`) and compares the two operands. It returns
+`1` if the first operand is greater than the second and `0` if it is not.
 
 ### 3.1.1.4 The greater than or equal operator
 
@@ -55,7 +60,9 @@ The greater than operator consists of a greater than sign (`>`) and compares the
 | `sl.types::int`    | `sl.types::int`    | `sl.types::bool` |
 | `sl.types::int`    | `sl.types::number` | `sl.types::bool` |
 
-The greater than or equal operator consists of a greater than sign and an equal sign (`>=`) and compares the two operands. It returns `1` if the first operand is greater than or equal to the second and `0` if it is not.
+The greater than or equal operator consists of a greater than sign and an equal sign (
+`>=`) and compares the two operands. It returns `1` if the first operand is greater than or equal to the second and
+`0` if it is not.
 
 ### 3.1.1.5 The less than operator
 
@@ -66,7 +73,8 @@ The greater than or equal operator consists of a greater than sign and an equal 
 | `sl.types::int`    | `sl.types::int`    | `sl.types::bool` |
 | `sl.types::int`    | `sl.types::number` | `sl.types::bool` |
 
-The less than operator consists of a less than sign (`<`) and compares the two operands. It returns `1` if the first operand is less than the second and `0` if it is not.
+The less than operator consists of a less than sign (`<`) and compares the two operands. It returns
+`1` if the first operand is less than the second and `0` if it is not.
 
 ### 3.1.1.6 The less than or equal operator
 
@@ -77,7 +85,9 @@ The less than operator consists of a less than sign (`<`) and compares the two o
 | `sl.types::int`    | `sl.types::int`    | `sl.types::bool` |
 | `sl.types::int`    | `sl.types::number` | `sl.types::bool` |
 
-The less than or equal operator consists of a less than sign and an equal sign (`<=`) and compares the two operands. It returns `1` if the first operand is less than or equal to the second and `0` if it is not.
+The less than or equal operator consists of a less than sign and an equal sign (
+`<=`) and compares the two operands. It returns `1` if the first operand is less than or equal to the second and
+`0` if it is not.
 
 ### 3.1.1.7 The includes operator
 
@@ -86,13 +96,19 @@ The less than or equal operator consists of a less than sign and an equal sign (
 | `T`              | `sl.types::array<T>` | `sl.types::bool` |
 | `sl.types::type` | `sl.types::type`     | `sl.types::bool` |
 
-The includes operator consists of a pipe sign and a greater than sign (`|>`) and compares the two operands. It returns `1` if the first operand is included in the second and `0` if it is not. The first operand can be any type and the second operand has to be an array of the same type.
+The includes operator consists of a pipe sign and a greater than sign (`|>`) and compares the two operands. It returns
+`1` if the first operand is included in the second and
+`0` if it is not. The first operand can be any type and the second operand has to be an array of the same type.
 
-If the first operand is an object of type `sl.types::type`, the second operand has to be from that type as well, and it returns `1` if the first type inherits or implements the second type and `0` if it does not.
+If the first operand is an object of type
+`sl.types::type`, the second operand has to be from that type as well, and it returns
+`1` if the first type inherits or implements the second type and `0` if it does not.
 
 ## 3.1.2 Arithmetic operators
 
-Arithmetic operators all return an object of type [`sl.types::number`](TBD.md) or [`sl.types::int`](TBD.md) (Except the plus operator which can also return an object of the type [`sl.types::string`](TBD.md)). They perform arithmetic operations on the operands.
+Arithmetic operators all return an object of type [`sl.types::number`](TBD.md) or [
+`sl.types::int`](TBD.md) (Except the plus operator which can also return an object of the type [
+`sl.types::string`](TBD.md)). They perform arithmetic operations on the operands.
 
 ### 3.1.2.1 The plus operator
 
@@ -129,7 +145,8 @@ of the subtraction.
 | `sl.types::int`    | `sl.types::int`    | `sl.types::int`    |
 | `sl.types::int`    | `sl.types::number` | `sl.types::number` |
 
-The multiplication operator consists of an asterisk (`*`) and multiplies the two operands. It returns the product of the two operands.
+The multiplication operator consists of an asterisk (
+`*`) and multiplies the two operands. It returns the product of the two operands.
 
 ### 3.1.2.4 The division operator
 
@@ -140,7 +157,8 @@ The multiplication operator consists of an asterisk (`*`) and multiplies the two
 | `sl.types::int`    | `sl.types::int`    | `sl.types::int`    |
 | `sl.types::int`    | `sl.types::number` | `sl.types::number` |
 
-The division operator consists of a slash (`/`) and divides the first operand by the second. It returns the quotient of the two operands.
+The division operator consists of a slash (
+`/`) and divides the first operand by the second. It returns the quotient of the two operands.
 
 if the second operand is `0`, `0` is returned.
 
@@ -153,7 +171,8 @@ if the second operand is `0`, `0` is returned.
 | `sl.types::int`    | `sl.types::int`    | `sl.types::int`    |
 | `sl.types::int`    | `sl.types::number` | `sl.types::number` |
 
-The modulo operator consists of a percent sign (`%`) and divides the first operand by the second and returns the rest of the division.
+The modulo operator consists of a percent sign (
+`%`) and divides the first operand by the second and returns the rest of the division.
 
 If the second operand is `0`, `0` is returned.
 
@@ -177,7 +196,8 @@ This operator only takes one operand on the left side.
 | `sl.types::number` | `sl.types::number` |
 | `sl.types::int`    | `sl.types::int`    |
 
-The decrement operator consists of two minus signs (`--`) and subtracts `1` from the operand. It returns the result of the subtraction.
+The decrement operator consists of two minus signs (`--`) and subtracts
+`1` from the operand. It returns the result of the subtraction.
 
 ### 3.1.2.8 The power operator
 
@@ -188,11 +208,13 @@ The decrement operator consists of two minus signs (`--`) and subtracts `1` from
 | `sl.types::int`    | `sl.types::int`    | `sl.types::int`    |
 | `sl.types::int`    | `sl.types::number` | `sl.types::number` |
 
-The power operator consists of a caret (`^`) and raises the first operand to the power of the second. It returns the result of the power.
+The power operator consists of a caret (
+`^`) and raises the first operand to the power of the second. It returns the result of the power.
 
 ## 3.1.3 Logical operators
 
-Logical operators all return an object of type [`sl.types::bool`](TBD.md). They perform logical operations on the operands.
+Logical operators all return an object of type [
+`sl.types::bool`](TBD.md). They perform logical operations on the operands.
 
 ### 3.1.3.1 The and operator
 
@@ -200,7 +222,8 @@ Logical operators all return an object of type [`sl.types::bool`](TBD.md). They 
 |------------------|------------------|------------------|
 | `sl.types::bool` | `sl.types::bool` | `sl.types::bool` |
 
-The and operator consists of two ampersands (`&&`) and compares the two operands. It returns `1` if both operands are`1` and `0` if one or both operands are `0`.
+The and operator consists of two ampersands (`&&`) and compares the two operands. It returns `1` if both operands are
+`1` and `0` if one or both operands are `0`.
 
 ### 3.1.3.2 The or operator
 
@@ -208,7 +231,8 @@ The and operator consists of two ampersands (`&&`) and compares the two operands
 |------------------|------------------|------------------|
 | `sl.types::bool` | `sl.types::bool` | `sl.types::bool` |
 
-The or operator consists of two vertical bars (`||`) and compares the two operands. It returns `1` if one or both of the operands are`1` and `0` if both operands are `0`.
+The or operator consists of two vertical bars (`||`) and compares the two operands. It returns
+`1` if one or both of the operands are`1` and `0` if both operands are `0`.
 
 ### 3.1.3.3 The not operator
 
@@ -218,7 +242,8 @@ This operator only takes one operand on the right side.
 |------------------|------------------|
 | `sl.types::bool` | `sl.types::bool` |
 
-The not operator consists of an exclamation mark (`!`) and compares the operand. It returns `1` if the operand is `0` and `0` if the operand is `1`.
+The not operator consists of an exclamation mark (`!`) and compares the operand. It returns `1` if the operand is
+`0` and `0` if the operand is `1`.
 
 ## 3.1.4 Assignment operators
 
@@ -275,28 +300,28 @@ sl::io.out((1 + 2) * 3); // Outputs 9
 The evaluation order of operators is defined by the following table. The operators are ordered from highest to lowest
 precedence.
 
-| Operator | Description           |
-|----------|-----------------------|
-| `()`     | Parentheses           |
-| `^`      | Power                 |
-| `*`      | Multiplication        |
-| `/`      | Division              |
-| `%`      | Modulo                |
-| `+`      | Addition              |
-| `-`      | Subtraction           |
-| `++`     | Increment             |
-| `--`     | Decrement             |
-| `!`      | Not                   |
-| `>`      | Greater than          |
-| `>=`     | Greater than or equal |
-| `<`      | Less than             |
-| `<=`     | Less than or equal    |
-| `==`     | Equals                |
-| `!=`     | Not equals            |
-| `&&`     | And                   |
-| `\|\|`   | Or                    |
-| `=`      | Assignment            |
-| `+=`     | Plus equals           |
-| `-=`     | Minus equals          |
+| Num | Operator | Description           |
+|-----|----------|-----------------------|
+| 0   | `=`      | Assignment            |
+| 0   | `+=`     | Plus equals           |
+| 0   | `-=`     | Minus equals          |
+| 1   | `()`     | Parentheses           |
+| 2   | `>`      | Greater than          |
+| 2   | `>=`     | Greater than or equal |
+| 2   | `<`      | Less than             |
+| 2   | `<=`     | Less than or equal    |
+| 2   | `==`     | Equals                |
+| 2   | `!=`     | Not equals            |
+| 3   | `^`      | Power                 |
+| 4   | `++`     | Increment             |
+| 4   | `--`     | Decrement             |
+| 5   | `!`      | Not                   |
+| 6   | `*`      | Multiplication        |
+| 6   | `/`      | Division              |
+| 7   | `%`      | Modulo                |
+| 8   | `+`      | Addition              |
+| 8   | `-`      | Subtraction           |
+|     | `&&`     | And                   |
+|     | `\|\|`   | Or                    |
 
 The left operand of an operator is always evaluated first, then the right operand. For operators with the same precedence the evaluation order is from left to right.

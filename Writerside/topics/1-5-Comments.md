@@ -2,7 +2,7 @@
 
 <code-block src="definitions.txt" include-lines="28-31" />
 
-Comments are elements that are allowed almost everywhere in the code (not while in identifier or in a string). These elements annotate a certain action. The compiler/interpreter ignores all comments.
+Comments are elements that are allowed almost everywhere in the code (not while in identifier, a parser instruction or in a string). These elements annotate a certain action. The compiler/interpreter ignores all comments.
 
 <warning>
 For simplicity the definitions file does not indicate where comments are allowed in the document.
@@ -15,4 +15,5 @@ except the null character.
 
 ## 1.5.2 Block comments
 
-Block comments are encapsulated by `/*` and `*/`. Their content can be anything except the null character or the sequence `*/`.
+Block comments are encapsulated by `/*` and
+`*/`. Their content can be anything except the null character or the sequence `*/`.

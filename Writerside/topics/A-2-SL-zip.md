@@ -1,3 +1,3 @@
 # A-2 SL.zip
 
-Start typing here...
+<resource src="test.zip"></resource> (Only clickable on the online version of the standard)

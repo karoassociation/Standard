@@ -26,7 +26,7 @@ This example defines a function that outputs Hello World as the entry point of t
 testNamespace::testClass {
     [constructor]
     #entrypoint; || {
-        sl.io.out("Hello World");
+        sl.io:out("Hello World");
     }
 }
 ```
@@ -39,10 +39,25 @@ testNamespace::testClass {
 ## 1.4.2 Import instruction
 
 ```
-#import {filename};
+#import {importNamespaceOrClass};
 ```
 
-[TBD]
+An import instruction imports either a type directly or all types of a namespace based on whatever is specified. The imported types can then be used in the whole file.
+
+The import parser instruction is only valid before any types are used.
+
+> That means you cannot use an import instruction after using an attribute or using the makeStaticAvailableEverywhere instruction.
+
+**Example**:
+
+```
+// Import the sl.types::bool type.
+#import sl.types::bool;
+
+// Import all types in the sl.attributes namespace
+#import sl.attributes;
+
+```
 
 ## 1.4.3 Make static function/property accessible everywhere
 

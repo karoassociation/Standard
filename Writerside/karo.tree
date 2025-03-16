@@ -10,7 +10,7 @@
     <toc-element topic="TBD.md"/>
     <toc-element topic="Start.md"/>
     <toc-element topic="1-Syntax-Elements.md">
-        <toc-element topic="1-1-Classes-and-Namespaces.md"/>
+        <toc-element topic="1-1-Files-Classes-and-Namespaces.md"/>
         <toc-element topic="1-2-Functions.md"/>
         <toc-element topic="1-3-Enumerations.md"/>
         <toc-element topic="1-4-Parser-Instructions.md">
@@ -34,6 +34,7 @@
     </toc-element>
     <toc-element topic="A-Attachments.md">
         <toc-element topic="A-1-Definitions-txt.md"/>
+        <toc-element topic="A-2-SL-zip.md"/>
     </toc-element>
     <toc-element topic="B-Possible-compiler-enhancements.topic"/>
 </instance-profile>
