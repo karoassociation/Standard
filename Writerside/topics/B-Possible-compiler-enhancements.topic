@@ -3,6 +3,7 @@
 <topic id="B-Possible-compiler-enhancements"
        title="B Possible compiler enhancements"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+    <primary-label ref="ns"/>
 
     <title>
         B Possible compiler enhancements

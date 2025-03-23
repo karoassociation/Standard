@@ -7,12 +7,11 @@
 >
 {style="warning"}
 
-In Karo the directory structure defines the namespaces and one file contains one single class.
+In Karo the directory structure defines the namespaces and one file contains one single class or one single enumeration.
 
 ## 1.1.1 Files
 
-Karo source code files have a filename ending with the extension
-`.karo`. The files contain the source code in uncompiled text form. A file contains optional parser instructions and one optional class definition.
+Karo source code files have a filename ending with the extension `.karo`. The files contain the source code in raw text form. A file contains optional parser instructions and one optional class definition.
 
 > Empty files or files with just parser instructions are allowed, but it is discouraged from using them.
 >
