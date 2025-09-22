@@ -1,8 +1,9 @@
 # 1.6 Type restrictions
 
-A special property of Karo is to restrict certain types to a certain values. This id done by putting the restrictions in single quotes after the type.
+A special property of Karo is to restrict certain types to certain values. This is done by putting the restrictions between single quotes after the type.
 
-You compare a value to a property of a type.
+These restrictions are constrained to comparisons with the operators `==`, `!=`, `|>`, `!|>`, `>`, `>=`, `<` and `<=`. One constraint consists of a property name of the type, an operator and a following value.
+Values can be strings as described in [](3-7-Strings.md) or a number as described in 
 
 **Example:**
 

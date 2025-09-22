@@ -65,4 +65,12 @@
         <description><![CDATA[Created after removal of "<Pipes.md>" from Karo Standard]]></description>
         <accepts>Pipes.html</accepts>
     </rule>
+    <rule id="6d5ee8ac">
+        <description>Created after removal of "1.9 Strings" from Karo Standard</description>
+        <accepts>1-9-Strings.html</accepts>
+    </rule>
+    <rule id="34137f82">
+        <description>Created after removal of "Attributes" from Karo Standard</description>
+        <accepts>Attributes.html</accepts>
+    </rule>
 </rules>

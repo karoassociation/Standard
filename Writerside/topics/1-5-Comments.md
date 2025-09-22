@@ -1,6 +1,6 @@
 # 1.5 Comments
 
-<code-block src="definitions.txt" include-lines="28-31" />
+<code-block lang="BNF" src="definitions.bnf" include-lines="28-31" />
 
 Comments are elements that are allowed almost everywhere in the code (not while in identifier, a parser instruction or in a string). These elements annotate a certain action. The compiler/interpreter ignores all comments.
 

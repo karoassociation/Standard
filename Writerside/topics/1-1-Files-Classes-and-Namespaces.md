@@ -1,6 +1,6 @@
 # 1.1 Files, Types and Namespaces
 
-<code-block src="definitions.txt" include-lines="1-2,4,11-12,27" />
+<code-block lang="BNF" src="definitions.bnf" include-lines="1-2,4,11-12,27" />
 
 > When this document speaks of classes in the sense of how to define their names, namespaces and their one class per
 > file constraint it also means Enumerations. Look at [1.3 Enumeration](1-3-Enumerations.md) for more information.
@@ -17,14 +17,26 @@ Karo source code files have a filename ending with the extension `.karo`. The fi
 >
 {style="note"}
 
-The null character (Hex code: 0) is not allowed and if the compiler or the interpreter encounters it they should
-throw an error.
+The following characters are not allowed and if the compiler or the interpreter encounters them they should throw an error:
+
+| Character    | Unicode code point |
+|--------------|--------------------|
+| NULL         | U+0000             |
+| Alert        | U+0007             |
+| Backspace    | U+0008             |
+| Escape       | U+001B             |
+| Form feed    | U+000C             |
+| Vertical tab | U+000B             |
 
 ### 1.1.1.1 MIME-Type
 
 <primary-label ref="ns"/>
 
 The files should have the mime-type "Text/Karo" if possible.
+
+### 1.1.1.2 Shebang
+
+If a file starts with a hash character followed by an exclamation mark (`#!`) the first line of the file shall be ignored.
 
 ## 1.1.2 Namespaces
 
@@ -41,3 +53,19 @@ A file located under `exampleProject/example/tests/` has the namespace `exampleP
 ## 1.1.3 Types
 
 A type is a container of properties. Multiple instance of the same type can exist (unless it is a static type). These instances are called classes.
+
+### 1.1.3.1 Boxed types
+
+Certain built-in types are boxed types that contain in addition to their properties an underlying value.
+
+Following are all the built-in types which are considered boxed.
+
+| Name:                                     | Boxes the value:                                                                   |
+|-------------------------------------------|------------------------------------------------------------------------------------|
+| `sl.types::string`                        | An UTF-16 encoded string of variable length.                                       |
+| `sl.types::number`                        | An integer value (preferably 64-bit if possible).                                  |
+| `sl.types::float`                         | An IEEE 756 floating point precision number.                                       |
+| `sl.types::array<T>`                      | An continuous row of elements of type `T`.                                         |
+| `sl.types::function<ReturnValue, ...T[]>` | A function with a return value of `ReturnValue` and parameters of the types `T[]`. |
+| `sl.types::action<...T[]>`                | A function with no return value and parameters of the types `T[]`.                 |
+| `sl.types::type`                          | A karo type.                                                                       |

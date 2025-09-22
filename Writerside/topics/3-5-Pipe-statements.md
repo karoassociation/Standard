@@ -1,6 +1,6 @@
 # 3.5 Pipe statements
 
-<code-block src="definitions.txt" include-lines="35"></code-block>
+<code-block lang="BNF" src="definitions.bnf" include-lines="35"></code-block>
 
 There are two types of pipe statements: Variable assignment statement and argument passing statement. A pipe statement consists of a left statement, the pipe operator (`->`) and then a statement or another pipe statement on the right.
 
@@ -22,9 +22,13 @@ test: sl.types::number := 10;
 800 + test -> test;
 </code-block>
 
+A variable assignment pipe statement returns `sl.types::void`, that means it cannot be used in a further pipe statement.
+
 ## 3.5.2 Argument passing
 
 In this type of statement the left side of the pipe operator will be evaluated and then passed as the first argument of the first function called on the right side.
+
+If the right side does not use a function call, the compiler or interpreter should throw an error.
 
 **Example:**
 

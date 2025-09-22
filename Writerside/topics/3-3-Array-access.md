@@ -1,6 +1,6 @@
 # 3.3 Array access
 
-<code-block src="definitions.txt" include-lines="21" />
+<code-block lang="BNF" src="definitions.bnf" include-lines="21" />
 
 Array access is invoked in a statement if an identifier is provided directly followed by an opening square bracket. After that comes an expression which is closed by a closing square bracket.
 

@@ -1,6 +1,6 @@
 # 3.4 New variable assignment
 
-<code-block src="definitions.txt" include-lines="34"></code-block>
+<code-block lang="BNF" src="definitions.bnf" include-lines="34"></code-block>
 
 To define a new variable in the current function context. Every variable has a name and a type. There cannot be two variables with the same name in the same context.
 

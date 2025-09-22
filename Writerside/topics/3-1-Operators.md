@@ -1,6 +1,6 @@
 # 3.1 Operators
 
-<code-block src="definitions.txt" include-lines="23" />
+<code-block lang="BNF" src="definitions.bnf" include-lines="23" />
 
 An operator consists of one or multiple of the in the definitions file defined characters (with no spaces in between). The only exception are the parentheses, which hold a special use case. An operator takes one or two operands. In the first case the operand can either be on the right or the left side of the operator.
 
@@ -224,6 +224,8 @@ Logical operators all return an object of type [
 
 The and operator consists of two ampersands (`&&`) and compares the two operands. It returns `1` if both operands are
 `1` and `0` if one or both operands are `0`.
+
+If the left operand is `0`, the right operand will not be evaluated.
 
 ### 3.1.3.2 The or operator
 

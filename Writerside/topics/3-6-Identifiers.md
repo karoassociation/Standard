@@ -1,3 +1,2 @@
 # 3.6 Identifiers
 
-Start typing here...
