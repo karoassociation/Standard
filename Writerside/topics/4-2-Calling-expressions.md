@@ -1,4 +1,4 @@
-# 3.2 Calling
+# 4.2 Calling expressions
 
 <code-block lang="BNF" src="definitions.bnf" include-lines="10" />
 
@@ -8,17 +8,17 @@ Calling an identifier invokes the function of the type of the identifier which h
 
 The return value of this statement type is the return value of the invoked function.
 
-## 3.2.1 Calling a function
+## 4.2.1 Calling a function
 
 Calling a function (an object of type `sl.types::function`) is a special case of calling. You can only pass the in the function definition provided function argument types. The return value of the function is the return value of the statement.
 
-## 3.2.2 Calling a type
+## 4.2.2 Calling a type
 
 Calling a class (an object of type `sl.types::type`) is a special case of calling. You can only pass the in the constructor definition provided constructor argument types. The return is the initialized class.
 
-## 3.2.3 Construct calling
+## 4.2.3 Construct calling
 
-If the call is directly followed by an anonymous function definition (see [](3-9-Anonymous-functions.md)) the function will be invoked with the provided arguments and the anonymous function as the last argument.
+If the call is directly followed by an anonymous function definition (see [](4-6-Anonymous-function-expressions.md)) the function will be invoked with the provided arguments and the anonymous function as the last argument.
 
 **Example:**
 
@@ -30,7 +30,7 @@ myFunction(10, "Hello") |result: number|: void { };
 
 The arguments `10` and `"Hello"` are passed as the first two arguments and the anonymous function as the third argument.
 
-### 3.2.3.1 Construct calling anonymous function return statement
+### 4.2.3.1 Construct calling anonymous function return statement
 
 If an anonymous function is defined in a construct calling context, the return type should be treated like it is called from the surrounding function.
 If a construct calling occurs in an anonymous function that is also part of a construct calling, the return type should be treated like it is called from the topmost construct calling context.

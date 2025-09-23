@@ -83,7 +83,7 @@ The following example creates a function that adds two numbers (passed as parame
 
 ## 1.2.2 Calling functions
 
-A function is called by calling the function object (see [3.2 Calling](3-2-Calling.md)). The parameters that are passed in correspond to the parameters that are defined in the function definition. The return value of the function is the value of the function object.
+A function is called by calling the function object (see [3.2 Calling](4-2-Calling%20expressions.md)). The parameters that are passed in correspond to the parameters that are defined in the function definition. The return value of the function is the value of the function object.
 
 ## 1.2.3 Function names
 

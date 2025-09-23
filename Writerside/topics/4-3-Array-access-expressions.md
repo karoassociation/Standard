@@ -1,4 +1,4 @@
-# 3.3 Array access
+# 4.3 Array access expressions
 
 <code-block lang="BNF" src="definitions.bnf" include-lines="21" />
 

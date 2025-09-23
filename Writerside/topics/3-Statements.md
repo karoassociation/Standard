@@ -2,22 +2,11 @@
 
 <code-block lang="BNF" src="definitions.bnf" include-lines="19-20" />
 
-A statement defines an action (expression) inside a function. Expressions can consist of other expressions. The following sections
-describe the different types of statements and expressions. These can be chained together to form a full statement.
+A statement defines an action inside a function. These statements use expressions described in [](4-Expressions.md).
 
 There are the following types of statements:
 
-* New variable declaration statement
-* Pipe statement
-* Return statement
-* Expression statement (Just an expression).
-
-Following types of expressions exist:
-
-* Number literal
-* String literal
-* Operator expression
-* Calling expression
-* Identifier expression
-* Array access expression
-* Anonymous function expression
+* Variable declaration statement ([](3-1-Variable-declaration-statement.md))
+* Pipe statement ([](3-2-Pipe-statements.md))
+* Return statement ([](3-3-Return-statements.md))
+* Expression statement (Just an expression)

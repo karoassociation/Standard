@@ -1,4 +1,4 @@
-# 3.1 Operators
+# 4.1 Operator expressions
 
 <code-block lang="BNF" src="definitions.bnf" include-lines="23" />
 
@@ -12,12 +12,12 @@ An operator consists of one or multiple of the in the definitions file defined c
 Following examples are considered valid operators (although the compiler/interpreter would throw an error, as they are not defined):
 `+`, `++`, `+-`, `/`, `/+-!<>`
 
-## 3.1.1 Comparing operators
+## 4.1.1 Comparing operators
 
 Comparing operators all return an object of type [`sl.types::bool`](TBD.md). It returns `1` if the condition is true and
 `0` if the condition is false.
 
-### 3.1.1.1 The equals operator
+### 4.1.1.1 The equals operator
 
 | Operand 1 type | Operand 2 type | Result type      |
 |----------------|----------------|------------------|
@@ -28,7 +28,7 @@ The equals operator consists of two equal signs (`==`) and compares the two oper
 
 If the operand are equal is determined by first comparing the type of the operands and then the values of the properties of the object.
 
-### 3.1.1.2 The not equals operator
+### 4.1.1.2 The not equals operator
 
 | Operand 1 type | Operand 2 type | Result type      |
 |----------------|----------------|------------------|
@@ -39,7 +39,7 @@ The not equals operator consists of an exclamation mark and an equal sign (
 
 If the operand are equal is determined by first comparing the type of the operands and then the values of the properties of the object.
 
-### 3.1.1.3 The greater than operator
+### 4.1.1.3 The greater than operator
 
 | Operand 1 type     | Operand 2 type     | Result type      |
 |--------------------|--------------------|------------------|
@@ -51,7 +51,7 @@ If the operand are equal is determined by first comparing the type of the operan
 The greater than operator consists of a greater than sign (`>`) and compares the two operands. It returns
 `1` if the first operand is greater than the second and `0` if it is not.
 
-### 3.1.1.4 The greater than or equal operator
+### 4.1.1.4 The greater than or equal operator
 
 | Operand 1 type     | Operand 2 type     | Result type      |
 |--------------------|--------------------|------------------|
@@ -64,7 +64,7 @@ The greater than or equal operator consists of a greater than sign and an equal 
 `>=`) and compares the two operands. It returns `1` if the first operand is greater than or equal to the second and
 `0` if it is not.
 
-### 3.1.1.5 The less than operator
+### 4.1.1.5 The less than operator
 
 | Operand 1 type     | Operand 2 type     | Result type      |
 |--------------------|--------------------|------------------|
@@ -76,7 +76,7 @@ The greater than or equal operator consists of a greater than sign and an equal 
 The less than operator consists of a less than sign (`<`) and compares the two operands. It returns
 `1` if the first operand is less than the second and `0` if it is not.
 
-### 3.1.1.6 The less than or equal operator
+### 4.1.1.6 The less than or equal operator
 
 | Operand 1 type     | Operand 2 type     | Result type      |
 |--------------------|--------------------|------------------|
@@ -89,7 +89,7 @@ The less than or equal operator consists of a less than sign and an equal sign (
 `<=`) and compares the two operands. It returns `1` if the first operand is less than or equal to the second and
 `0` if it is not.
 
-### 3.1.1.7 The includes operator
+### 4.1.1.7 The includes operator
 
 | Operand 1 type   | Operand 2 type       | Result type      |
 |------------------|----------------------|------------------|
@@ -104,13 +104,13 @@ If the first operand is an object of type
 `sl.types::type`, the second operand has to be from that type as well, and it returns
 `1` if the first type inherits or implements the second type and `0` if it does not.
 
-## 3.1.2 Arithmetic operators
+## 4.1.2 Arithmetic operators
 
 Arithmetic operators all return an object of type [`sl.types::number`](TBD.md) or [
 `sl.types::int`](TBD.md) (Except the plus operator which can also return an object of the type [
 `sl.types::string`](TBD.md)). They perform arithmetic operations on the operands.
 
-### 3.1.2.1 The plus operator
+### 4.1.2.1 The plus operator
 
 | Operand 1 type     | Operand 2 type     | Result type        |
 |--------------------|--------------------|--------------------|
@@ -124,7 +124,7 @@ The plus operator consists of a plus sign (`+`) and adds the two operands. It re
 
 If both operands are of the type [`sl.types::string`](TBD.md) it concatenates the two strings.
 
-### 3.1.2.2 The minus operator
+### 4.1.2.2 The minus operator
 
 | Operand 1 type     | Operand 2 type     | Result type        |
 |--------------------|--------------------|--------------------|
@@ -136,7 +136,7 @@ If both operands are of the type [`sl.types::string`](TBD.md) it concatenates th
 The minus operator consists of a minus sign (`-`) and subtracts the second operand from the first. It returns the result
 of the subtraction.
 
-### 3.1.2.3 The multiplication operator
+### 4.1.2.3 The multiplication operator
 
 | Operand 1 type     | Operand 2 type     | Result type        |
 |--------------------|--------------------|--------------------|
@@ -148,7 +148,7 @@ of the subtraction.
 The multiplication operator consists of an asterisk (
 `*`) and multiplies the two operands. It returns the product of the two operands.
 
-### 3.1.2.4 The division operator
+### 4.1.2.4 The division operator
 
 | Operand 1 type     | Operand 2 type     | Result type        |
 |--------------------|--------------------|--------------------|
@@ -162,7 +162,7 @@ The division operator consists of a slash (
 
 if the second operand is `0`, `0` is returned.
 
-### 3.1.2.5 The modulo operator
+### 4.1.2.5 The modulo operator
 
 | Operand 1 type     | Operand 2 type     | Result type        |
 |--------------------|--------------------|--------------------|
@@ -176,7 +176,7 @@ The modulo operator consists of a percent sign (
 
 If the second operand is `0`, `0` is returned.
 
-### 3.1.2.6 The increment operator
+### 4.1.2.6 The increment operator
 
 This operator only takes one operand on the left side.
 
@@ -187,7 +187,7 @@ This operator only takes one operand on the left side.
 
 The increment operator consists of two plus signs (`++`) and adds `1` to the operand. It returns the result of the sum.
 
-### 3.1.2.7 The decrement operator
+### 4.1.2.7 The decrement operator
 
 This operator only takes one operand on the left side.
 
@@ -199,7 +199,7 @@ This operator only takes one operand on the left side.
 The decrement operator consists of two minus signs (`--`) and subtracts
 `1` from the operand. It returns the result of the subtraction.
 
-### 3.1.2.8 The power operator
+### 4.1.2.8 The power operator
 
 | Operand 1 type     | Operand 2 type     | Result type        |
 |--------------------|--------------------|--------------------|
@@ -211,12 +211,12 @@ The decrement operator consists of two minus signs (`--`) and subtracts
 The power operator consists of a caret (
 `^`) and raises the first operand to the power of the second. It returns the result of the power.
 
-## 3.1.3 Logical operators
+## 4.1.3 Logical operators
 
 Logical operators all return an object of type [
 `sl.types::bool`](TBD.md). They perform logical operations on the operands.
 
-### 3.1.3.1 The and operator
+### 4.1.3.1 The and operator
 
 | Operand 1 type   | Operand 2 type   | Result type      |
 |------------------|------------------|------------------|
@@ -227,7 +227,7 @@ The and operator consists of two ampersands (`&&`) and compares the two operands
 
 If the left operand is `0`, the right operand will not be evaluated.
 
-### 3.1.3.2 The or operator
+### 4.1.3.2 The or operator
 
 | Operand 1 type   | Operand 2 type   | Result type      |
 |------------------|------------------|------------------|
@@ -236,7 +236,7 @@ If the left operand is `0`, the right operand will not be evaluated.
 The or operator consists of two vertical bars (`||`) and compares the two operands. It returns
 `1` if one or both of the operands are`1` and `0` if both operands are `0`.
 
-### 3.1.3.3 The not operator
+### 4.1.3.3 The not operator
 
 This operator only takes one operand on the right side.
 
@@ -261,9 +261,9 @@ The second example has no effect though.
 </warning>
 </note>
 
-## 3.1.4
+## 4.1.4
 
-## 3.1.5 Parentheses
+## 4.1.5 Parentheses
 
 Parentheses are used to group expressions. They are also used to define the order of operations. The expression inside
 the parentheses is evaluated first.
@@ -275,7 +275,7 @@ sl::io.out(1 + 2 * 3); // Outputs 7
 sl::io.out((1 + 2) * 3); // Outputs 9
 ```
 
-## 3.1.6 Evaluation order
+## 4.1.6 Evaluation order
 
 The evaluation order of operators is defined by the following table. The operators are ordered from highest to lowest
 precedence.

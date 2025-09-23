@@ -1,4 +1,4 @@
-# 3.5 Pipe statements
+# 3.2 Pipe statements
 
 <code-block lang="BNF" src="definitions.bnf" include-lines="35"></code-block>
 
@@ -8,7 +8,7 @@ There are two types of pipe statements: Variable assignment statement and argume
 As specified in <a href="A-1-Definitions-txt.md"></a> a pipe statement cannot be used in a variable assignment statement or inside of parenthesis.
 </warning>
 
-## 3.5.1 Variable assignment
+## 3.2.1 Variable assignment
 
 The pipe statement allows to assign a new value to an existing property or a variable. The statement on the left side will be evaluated and assigned to the identifier specified on the right side.
 
@@ -24,7 +24,7 @@ test: sl.types::number := 10;
 
 A variable assignment pipe statement returns `sl.types::void`, that means it cannot be used in a further pipe statement.
 
-## 3.5.2 Argument passing
+## 3.2.2 Argument passing
 
 In this type of statement the left side of the pipe operator will be evaluated and then passed as the first argument of the first function called on the right side.
 

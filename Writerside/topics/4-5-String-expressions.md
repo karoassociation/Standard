@@ -1,8 +1,8 @@
-# 3.7 Strings
+# 4.5 String expressions
 
 A string is a representation of characters which are enclosed by double quotes (`"`) or single quotes (`'`).
 
-## 3.7.1 String escape sequences
+## 4.5.1 String escape sequences
 
 In a string literal escape sequences can be specified to insert certain special characters. These sequences are initialized by a backslash (`\`) and a sequence of other characters specified in the following table:
 

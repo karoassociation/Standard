@@ -3,7 +3,7 @@
 A special property of Karo is to restrict certain types to certain values. This is done by putting the restrictions between single quotes after the type.
 
 These restrictions are constrained to comparisons with the operators `==`, `!=`, `|>`, `!|>`, `>`, `>=`, `<` and `<=`. One constraint consists of a property name of the type, an operator and a following value.
-Values can be strings as described in [](3-7-Strings.md) or a number as described in 
+Values can be strings as described in [](4-5-String%20expressions.md) or a number as described in 
 
 **Example:**
 
