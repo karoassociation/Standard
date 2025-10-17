@@ -6,6 +6,8 @@ Calling is invoked in a statement if an identifier is provided directly followed
 
 Calling an identifier invokes the function of the type of the identifier which has the attribute `sl.attributes::invokable`. The function is invoked with the arguments provided in the parentheses. The arguments are evaluated from left to right and are passed by value.
 
+The parameters can be downcasted to the provided argument types if possible. It is always the overloaded function with the best matching argument types that will be invoked. If no matching function is found, the compiler or interpreter should throw an error. Best matching means that the function with the least number of required downcasts will be chosen. If there are multiple functions with the same number of required downcasts, the compiler or interpreter should throw an error.
+
 The return value of this statement type is the return value of the invoked function.
 
 ## 4.2.1 Calling a function

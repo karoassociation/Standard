@@ -1,6 +1,7 @@
 # 4 Expressions
 
-An expression is part of a statement or a part of another expression.
+An expression is part of a statement or a part of another expression. Every expression has a return type that can be used in another expression (where applicable).
+Expressions with the return type `sl.types::void` cannot be used in another expression, as they hold no value.
 
 Following types of expressions exist:
 

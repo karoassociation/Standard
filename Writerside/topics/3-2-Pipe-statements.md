@@ -4,10 +4,6 @@
 
 There are two types of pipe statements: Variable assignment statement and argument passing statement. A pipe statement consists of a left statement, the pipe operator (`->`) and then a statement or another pipe statement on the right.
 
-<warning>
-As specified in <a href="A-1-Definitions-txt.md"></a> a pipe statement cannot be used in a variable assignment statement or inside of parenthesis.
-</warning>
-
 ## 3.2.1 Variable assignment
 
 The pipe statement allows to assign a new value to an existing property or a variable. The statement on the left side will be evaluated and assigned to the identifier specified on the right side.

@@ -10,19 +10,19 @@
 <calling_parameter_list> ::= '(' ((<expression>) (',' <expression>)*)? ')'
 <class_definition_content> ::= (<class_function_definition> | <class_property_definition> | <parser_instruction>)*
 <class_function_definition> ::= <attribute>* <function_definition>
-<function_definition> ::= ('|' <function_definition_parameter_list> '|')? ':' <identifier> '{' <function_definition_content> '}'
+<function_definition> ::= (<name>)? '|' <function_definition_parameter_list> '|' ':' <type_name> '{' <function_definition_content> '}'
 <function_definition_parameter_list> ::= ((<name> ':' ('...')? (<identifier> | '!')) (',' <name> ':' ('...')? <identifier>)*)?
 <function_definition_content> ::= (<instruction> | <varia>)*
 <instruction> ::= (<statement> ';' | <parser_instruction>)
 <identifier> ::= <namespace>? (<name> | <static_identifier>) <generic_argument_list>? <array_type_appendix>?
 <value_identifier> ::= <identifier> (('.' <name>) | (':' <name>))?
 <statement> ::= (<return_statement> | <new_variable_assignment_statement> | <pipe_statement> | <varia> | <expression>)
-<expression> ::= (<value_identifier> | <function_definition> | <calling_parameter_list> | <operator_symbol> | <string> | <array_access> | <number>)*
+<expression> ::= (<value_identifier> | <anonymous_function_definition> | <calling_parameter_list> | <operator_symbol> | <string> | <array_access> | <number>)*
 <array_access> ::= '[' <expression> ']'
 <string> ::= ('"' (!'"')* '"')
 <operator_symbol> ::= '^' | '+' | '-' | '/' | '*' | '>' | '<' | '(' | ')' | '%' | '&'
 <number> ::= '-'? (<decimal_number> | <binary_number> | <hex_number>)
-<name> ::= <valid_char> (<valid_char> | <number>)*
+<name> ::= <varia> <valid_char> (<valid_char> | <number>)* <varia>
 <hex_number> ::= '0x' ('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | 'A' | 'B'| 'C' | 'D' | 'E' | 'F')+
 <class_property_definition> ::= <attribute>* <name> ':' <identifier> (':=' <expression>) ';'
 <comment> ::= <line_comment> | <block_comment>
@@ -34,9 +34,12 @@
 <new_variable_assignment_statement> ::= <name> ':' <identifier> ':=' <expression>
 <pipe_statement> ::= <expression> '->' (<expression> | <pipe_statement>)
 <generic_parameter_list> ::= '<' (<name> ',')* <name> '>'
-<generic_argument_list> ::= '<' (<identifier> ',')* <identifier> '>'
-<valid_char> ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z"
-<varia> ::= <comment> | ' ' | '\n' | '\r' | '\t' | '\{Zs}'
+<generic_argument_list> ::= '<' (<type_name> ',')* <type_name> '>'
+<valid_char> ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | '_'
+<varia> ::= (<comment> | ' ' | '\n' | '\r' | '\t' | '\{Zs}')*
 <binary_number> ::= '0b' ('0' | '1')+
 <decimal_number> ::= ('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9')+ ('.' ('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9')+)?
-<return_statement> ::= '!' <expression>
+<return_statement> ::= '!' (<expression>)?
+<anonymous_function_definition> ::= ('|' <anonymous_function_definition_parameter_list> '|' ':' <type_name>) '{' <function_definition_content> '}'
+<anonymous_function_definition_parameter_list> ::= (<name> ':' <identifier> ',')* (<name> ':' <identifier>)?
+<type_name> ::= <namespace>? <name> <generic_argument_list>? <array_type_appendix>?

@@ -11,7 +11,7 @@ Functions (Classes with the type [`sl.types.function<ReturnType, ParameterTypes[
 Inside a type functions can be defined as properties with a special syntax.
 
 A function definition consists of three elements: The parameters list, the return type and the function body with the statements.
-The parameter list is optional and can either be omitted or blank.
+The parameter list is optional and can be blank.
 
 A function defined in a type will always be assumed to have been marked with the `sl.attributes::static` attribute unless the function has a first parameter that is a class reference parameter (see [class reference parameter](#1-2-1-1-3-class-reference-parameter)).
 An exception to this rule are functions that have the `sl.attributes::constructor` attribute. These functions will always be assumed to be non-static unless they also have the `sl.attributes::static` attribute.
@@ -19,6 +19,8 @@ An exception to this rule are functions that have the `sl.attributes::constructo
 ### 1.2.1.1 Parameter list
 
 The parameter list is enclosed with vertical bars. The parameters are separated by a comma (trailing comma is not allowed). For a parameter first comes the name of the variable that will store the passed parameter. After that comes a colon and after that the type definition of the parameter.
+
+A function marked with the `sl.attributes::constructor` and the `sl.attributes::static` attribute cannot have any parameters.
 
 **Example:**
 
@@ -58,6 +60,8 @@ The following example defines a function with two parameters, where the first on
 
 The return type defines the type of the value the function returns. It is defined by a colon followed by the type.
 
+A function marked with the `sl.attributes::constructor` attribute must have `sl.types::void` as return type.
+
 **Example:**
 
 The following example defines two functions (one with a parameter list, the second one without a parameter list) (these examples are incomplete).
@@ -81,9 +85,18 @@ The following example creates a function that adds two numbers (passed as parame
 }
 ```
 
+## 1.2.1.4 Generic functions
+
+A function can be made generic by appending a less-then symbol (`<`), a type parameter list and then a greater-then symbol (`>`) after the function name.
+The type parameter list is a comma-separated list of type parameter names.
+The defined parameter names can be used everywhere in the function definition. Type parameter names must be unique within the function definition.
+More than one function with the same name can be defined as long as they have a different number of type parameters (including zero).
+
+A function marked with the `sl.attributes::constructor` attribute can not be made generic.
+
 ## 1.2.2 Calling functions
 
-A function is called by calling the function object (see [3.2 Calling](4-2-Calling%20expressions.md)). The parameters that are passed in correspond to the parameters that are defined in the function definition. The return value of the function is the value of the function object.
+A function is called by calling the function object (see [](4-2-Calling-expressions.md)). The parameters that are passed in correspond to the parameters that are defined in the function definition. The return value of the function is the value of the function object.
 
 ## 1.2.3 Function names
 
